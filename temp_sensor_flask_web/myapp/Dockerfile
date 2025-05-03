@@ -1,0 +1,24 @@
+from python:3-alpine
+RUN python -m pip install --upgrade pip
+RUN apk update && \
+    apk upgrade && \
+    apk add git
+RUN apk add python3-dev && \
+    apk add gcc && \
+    apk add libc-dev
+
+WORKDIR /myapp
+
+COPY . /myapp 
+
+RUN pip3 --no-cache-dir install -r requirements.txt
+RUN pip3 --no-cache-dir install Adafruit_DHT
+
+
+
+WORKDIR /myapp
+
+EXPOSE 2029
+ENTRYPOINT ["python3"]
+CMD ["flasktemp.py"]
+

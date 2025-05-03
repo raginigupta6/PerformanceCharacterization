@@ -1,0 +1,19 @@
+
+
+[ "$(whoami)" == "root" ] || { echo "Must be run as sudo!"; exit 1; }
+
+
+
+for (( threads=1;  threads<=10000;  threads++ ))
+do
+	echo -e "*********"
+	echo -e "Run $run"
+	echo -e "*********\n"
+	echo -e "Running CPU test...\n"
+
+	sysbench --test=cpu --num-threads=$threads --cpu-max-prime=20000 run
+ | grep 'total time:\|min:\|avg:\|max:' | tr -s [:space:]
+	
+	echo -e ""
+
+done

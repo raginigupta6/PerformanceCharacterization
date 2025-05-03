@@ -1,0 +1,8 @@
+for ((n=0;n<5;n++))
+do
+ docker build -t face_recognition_$n
+ docker run -it \
+    --name face_recognition_$n \
+    --device /dev/vchiq \
+     /bin/bash
+done

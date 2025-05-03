@@ -1,0 +1,515 @@
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          96.8102s
+    total number of events:              10000
+    total time taken by event execution: 967.7346
+    per-request statistics:
+         min:                                 38.07ms
+         avg:                                 96.77ms
+         max:                                231.35ms
+         approx.  95 percentile:             128.06ms
+
+Threads fairness:
+    events (avg/stddev):           1000.0000/71.51
+    execution time (avg/stddev):   96.7735/0.03
+
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          95.3717s
+    total number of events:              10000
+    total time taken by event execution: 953.3310
+    per-request statistics:
+         min:                                 32.63ms
+         avg:                                 95.33ms
+         max:                                204.42ms
+         approx.  95 percentile:             125.63ms
+
+Threads fairness:
+    events (avg/stddev):           1000.0000/23.54
+    execution time (avg/stddev):   95.3331/0.02
+
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=100 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 100
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          95.5899s
+    total number of events:              10000
+    total time taken by event execution: 9514.1925
+    per-request statistics:
+         min:                                 66.08ms
+         avg:                                951.42ms
+         max:                               1360.59ms
+         approx.  95 percentile:            1154.84ms
+
+Threads fairness:
+    events (avg/stddev):           100.0000/6.50
+    execution time (avg/stddev):   95.1419/0.23
+
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=1000 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1000
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          95.6300s
+    total number of events:              10000
+    total time taken by event execution: 90428.4328
+    per-request statistics:
+         min:                                 32.65ms
+         avg:                               9042.84ms
+         max:                              13153.27ms
+         approx.  95 percentile:           10844.02ms
+
+Threads fairness:
+    events (avg/stddev):           10.0000/0.66
+    execution time (avg/stddev):   90.4284/2.68
+
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10000 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10000
+
+Doing CPU performance benchmark
+
+FATAL: Thread #4168 creation failed, errno = 11 (Resource temporarily unavailable)
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10000 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10000
+
+Doing CPU performance benchmark
+
+FATAL: Thread #4168 creation failed, errno = 11 (Resource temporarily unavailable)
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10000 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10000
+
+Doing CPU performance benchmark
+
+FATAL: Thread #4165 creation failed, errno = 11 (Resource temporarily unavailable)
+pi@raspberrypi:~ $ sysbench --test=cpu --num-threads=10000 --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10000
+
+Doing CPU performance benchmark
+
+FATAL: Thread #4168 creation failed, errno = 11 (Resource temporarily unavailable)
+pi@raspberrypi:~ $ sysbench --test=memory --memory-block-size=1M --memory-total-size=16 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing memory operations speed test
+Memory block size: 1024K
+
+Memory transfer size: 0M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 1 (  468.59 ops/sec)
+
+1.00 MB transferred (468.59 MB/sec)
+
+
+Test execution summary:
+    total time:                          0.0021s
+    total number of events:              1
+    total time taken by event execution: 0.0012
+    per-request statistics:
+         min:                                  1.21ms
+         avg:                                  1.21ms
+         max:                                  1.21ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0012/0.00
+
+pi@raspberrypi:~ $ sysbench --test=memory --memory-block-size=10M --memory-total-size=16 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing memory operations speed test
+Memory block size: 10240K
+
+Memory transfer size: 0M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 1 (   71.21 ops/sec)
+
+10.00 MB transferred (712.14 MB/sec)
+
+
+Test execution summary:
+    total time:                          0.0140s
+    total number of events:              1
+    total time taken by event execution: 0.0129
+    per-request statistics:
+         min:                                 12.89ms
+         avg:                                 12.89ms
+         max:                                 12.89ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0129/0.00
+
+pi@raspberrypi:~ $ sysbench --test=memory --memory-block-size=100M --memory-total-size=16 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing memory operations speed test
+Memory block size: 102400K
+
+Memory transfer size: 0M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 1 (   13.88 ops/sec)
+
+100.00 MB transferred (1388.01 MB/sec)
+
+
+Test execution summary:
+    total time:                          0.0720s
+    total number of events:              1
+    total time taken by event execution: 0.0715
+    per-request statistics:
+         min:                                 71.50ms
+         avg:                                 71.50ms
+         max:                                 71.50ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0715/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=10 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0343s
+    total number of events:              1
+    total time taken by event execution: 0.0333
+    per-request statistics:
+         min:                                 33.27ms
+         avg:                                 33.27ms
+         max:                                 33.27ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0333/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=100 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0289s
+    total number of events:              1
+    total time taken by event execution: 0.0277
+    per-request statistics:
+         min:                                 27.72ms
+         avg:                                 27.72ms
+         max:                                 27.72ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0277/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=1000 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0364s
+    total number of events:              1
+    total time taken by event execution: 0.0316
+    per-request statistics:
+         min:                                 31.57ms
+         avg:                                 31.57ms
+         max:                                 31.57ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0316/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=1000 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0421s
+    total number of events:              1
+    total time taken by event execution: 0.0411
+    per-request statistics:
+         min:                                 41.14ms
+         avg:                                 41.14ms
+         max:                                 41.14ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0411/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=10000 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0386s
+    total number of events:              1
+    total time taken by event execution: 0.0376
+    per-request statistics:
+         min:                                 37.63ms
+         avg:                                 37.63ms
+         max:                                 37.63ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0376/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=100000 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0339s
+    total number of events:              1
+    total time taken by event execution: 0.0332
+    per-request statistics:
+         min:                                 33.19ms
+         avg:                                 33.19ms
+         max:                                 33.19ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0332/0.00
+
+pi@raspberrypi:~ $ sysbench --test=mutex --mutex-num=100000 --thread-locks=5000000 --mutex-loops=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing mutex performance test
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.0325s
+    total number of events:              1
+    total time taken by event execution: 0.0318
+    per-request statistics:
+         min:                                 31.78ms
+         avg:                                 31.78ms
+         max:                                 31.78ms
+         approx.  95 percentile:         10000000.00ms
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   0.0318/0.00
+
+pi@raspberrypi:~ $ sysbench --test=threads --num-threads=10 --thread-yields=0 --max-requests=1000000 --thread-locks=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10
+
+Doing thread subsystem performance test
+Thread yields per test: 0 Locks used: 1
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.4138s
+    total number of events:              1000000
+    total time taken by event execution: 2.5924
+    per-request statistics:
+         min:                                  0.00ms
+         avg:                                  0.00ms
+         max:                                 24.85ms
+         approx.  95 percentile:               0.00ms
+
+Threads fairness:
+    events (avg/stddev):           100000.0000/14140.42
+    execution time (avg/stddev):   0.2592/0.01
+
+pi@raspberrypi:~ $ sysbench --test=threads --num-threads=100 --thread-yields=0 --max-requests=1000000 --thread-locks=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 100
+
+Doing thread subsystem performance test
+Thread yields per test: 0 Locks used: 1
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.3719s
+    total number of events:              1000000
+    total time taken by event execution: 20.4003
+    per-request statistics:
+         min:                                  0.00ms
+         avg:                                  0.02ms
+         max:                                200.48ms
+         approx.  95 percentile:               0.00ms
+
+Threads fairness:
+    events (avg/stddev):           10000.0000/3117.94
+    execution time (avg/stddev):   0.2040/0.04
+
+pi@raspberrypi:~ $ sysbench --test=threads --num-threads=1000 --thread-yields=0 --max-requests=1000000 --thread-locks=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1000
+
+Doing thread subsystem performance test
+Thread yields per test: 0 Locks used: 1
+Threads started!
+Done.
+
+
+Test execution summary:
+    total time:                          0.5118s
+    total number of events:              1000000
+    total time taken by event execution: 77.0083
+    per-request statistics:
+         min:                                  0.00ms
+         avg:                                  0.08ms
+         max:                                275.92ms
+         approx.  95 percentile:               0.00ms
+
+Threads fairness:
+    events (avg/stddev):           1000.0000/1321.76
+    execution time (avg/stddev):   0.0770/0.06
+
+pi@raspberrypi:~ $ sysbench --test=threads --num-threads=10000 --thread-yields=0 --max-requests=1000000 --thread-locks=1 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 10000
+
+Doing thread subsystem performance test
+Thread yields per test: 0 Locks used: 1
+FATAL: Thread #4168 creation failed, errno = 11 (Resource temporarily unavailable)

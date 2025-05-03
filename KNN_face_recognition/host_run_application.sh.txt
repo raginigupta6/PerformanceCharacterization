@@ -1,0 +1,4 @@
+for ((n=0;n<5;n++))
+do
+ python3 facerec_on_raspberry_pi_$n
+done
